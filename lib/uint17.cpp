@@ -12,8 +12,8 @@ void BitManipulator::TurnOffBit(uint8_t& byte, const uint8_t index) {
     byte &= kMaxterms_[index];
 }
 
-uint17_t::uint17_t(uint8_t* last_bits, uint64_t bit_index, uint16_t* full_part)
-        :last_bits_(last_bits), bit_index_(bit_index), full_part_(full_part) {}
+uint17_t::uint17_t(uint8_t* last_bits, uint64_t bit_index, uint16_t* full_part):
+                    last_bits_(last_bits), bit_index_(bit_index), full_part_(full_part) {}
 
 uint17_t& uint17_t::operator=(const uint32_t right) {
     *full_part_ = right / 2;
